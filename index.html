@@ -1,4 +1,4 @@
-Jennymar Rojas
+
 <!-- saved from url=(0038)https://app.nyumc.org/badge/fisGkMeFOB -->
 <html class=""><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
     
@@ -101,7 +101,7 @@ Jennymar Rojas
     <script type="text/javascript" src="./NYULMC _ Covid-19 Badge_files/jquery.typeahead.js"></script>
     <script type="text/javascript">
         /** server side variables */
-        var messagebox = "Badge [id=fisGkMeFOB, name=Jennymar Rojas, datetime=Feb 17, 2021, isToday=Y, passcolor=GREEN, env=prod, userIdType=kid, userId=FC1233, isVendor=N, vaccineStatus=C, vaccineDate=JAN 5, 2021]";
+        var messagebox = "Badge [id=fisGkMeFOB, name=Jennymar Rojas, datetime=Feb 17, 2021, isToday=Y, passcolor=GREEN, env=prod, userIdType=kid, userId=kid, isVendor=N, vaccineStatus=C, vaccineDate=JAN 11, 2021]";
         console.log('hdhdd',messagebox)
     </script>
 <style type="text/css">.fancybox-margin{margin-right:0px;}</style></head>
@@ -114,7 +114,7 @@ Jennymar Rojas
                      <span class="vaccinated">Vaccinated</span>
                     
 				</div>
-				<div class="alignright">JAN 5, 2021</div>
+				<div class="alignright">JAN 11, 2021</div>
 			</div>
     
     
@@ -326,7 +326,7 @@ document.getElementById("demo2").innerHTML = months[d.getMonth()];
         document.getElementById("overlay_ad_new").style.display = "block";
         var $temp = $("<input>");
         var $env = "prod";
-        var $userId = "FC1233";
+        var $userId = "j0rr";
         var $mycolor = "GREEN";
         
         var url = "http://localhost:8080/badge/kinsametric";
@@ -368,7 +368,7 @@ document.getElementById("demo2").innerHTML = months[d.getMonth()];
     function checkuserClick(element) {
         console.log(element);
             var $env = "prod";
-            var $userId = "FC1233";
+            var $userId = "j0rr";
             var $mycolor = "GREEN";
             var $adElement = element;
             
