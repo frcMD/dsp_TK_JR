@@ -1,0 +1,1026 @@
+:root {
+    --spacer: 15px;
+}
+  
+body {
+    margin: 0;
+    background-color: #580F8B;
+}
+
+@media screen and (min-width: 320px) and (max-width: 900px) and (orientation: landscape) {
+  body {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-transform: rotate(-90deg);
+        -ms-transform: rotate(-90deg);
+            transform: rotate(-90deg);
+    -webkit-transform-origin: left top;
+        -ms-transform-origin: left top;
+            transform-origin: left top;
+    width: 100vh;
+    min-height: 100vw;
+    position: absolute;
+    left: 0;
+    top: 100%;
+  }
+}
+  
+.container {
+  margin: 0;
+  display: -webkit-box;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  padding-top: var(--spacer) !important;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  width: 100%;
+}
+
+.containerStyleVaccinated {
+  min-height: 91%;
+}
+
+.containerStylenotVaccinated {
+  min-height: 100%;
+}
+
+.header {
+  -webkit-box-align: baseline;
+  -ms-flex-align: baseline;
+      align-items: baseline;
+  color: #fff;
+  position: relative;
+  display: -webkit-box;
+  display: -moz-box;
+  display: block;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+        justify-content: space-between;
+  /* margin-bottom: var(--spacer); */
+  height: auto !important;
+  padding: 0 0px !important;
+  background-color: transparent !important;
+}
+
+.header__logo {
+    background-size: contain;
+    height: 40px;
+    width: 94px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    float: left;
+}
+
+.header__h1 {
+    font-family: system-ui, "Roboto", -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.19;
+    letter-spacing: -0.3px;
+    margin: 0;
+    position: absolute;
+    bottom: -2px;
+    width: 100%;
+    text-align: right;
+}
+
+.header__h1_black {
+    font-family: system-ui, "Roboto", -apple-system, BlinkMacSystemFont, sans-serif;
+    color: #333333;
+    font-size: 16px;
+    font-weight: 700;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1;
+    letter-spacing: -0.3px;
+    margin: 0;
+    position: absolute;
+    bottom: -2px;
+    width: 100%;
+    text-align: right;
+}
+
+.pass {
+  position: relative;
+  /* background-color: #fff;
+  border: 2px solid #f7f7f7;
+  -webkit-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+          box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 10px 10px 10px 10px; */
+  color: #333;
+  display: -webkit-box;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-bottom: 15px;
+}
+
+.vendor_pass {
+    /* padding-top: 50px !important; */
+}
+
+.mat-label {
+    font-family: system-ui, "Roboto", -apple-system, BlinkMacSystemFont, sans-serif;
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1;
+    letter-spacing: normal;
+    color: #460b6f;
+    margin: 0px !important;
+  }
+
+  .mat-input {
+    font-family: system-ui, "Roboto", -apple-system, BlinkMacSystemFont, sans-serif;
+    position: relative;
+    background: transparent;
+    width: 100%;
+    border: none;
+    outline: none;
+    /* padding: 0 0 11px; */
+    font-weight: 900;
+    font-stretch: normal;
+    font-style: normal;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  .mat-input-yellow {
+    color: #333333;
+  }
+
+  .mat-input-green {
+    color: white;
+  }
+
+  .mat-new-font-date {
+    font-size: 32px;
+    line-height: 0.94;
+    letter-spacing: -0.85px;
+  }
+  
+  .mat-old-font-date {
+    font-size: 72px;
+    line-height: 1;
+    letter-spacing: -1.92px;
+  }
+
+  .mat-input-name {
+    font-family: system-ui, "Roboto", -apple-system, BlinkMacSystemFont, sans-serif;;
+    position: relative;
+    background: transparent;
+    width: 100%;
+    border: none;
+    /* border-bottom: 2px solid #ededed ; */
+    outline: none;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    word-break: break-word;
+    text-align: center;
+    margin-top: 8px;
+  }
+
+  .mat-input-name-old-font {
+    font-size: 32px;
+    line-height: 1;
+    letter-spacing: -0.85px;
+  }
+
+  .mat-input-name-new-font {
+    font-size: 20px;
+    line-height: 1;
+    letter-spacing: -0.53px;
+  }
+
+  .mat-input-name-yellow {
+    color: #333333;
+  }
+  .mat-input-name-green {
+    color: white;
+  }
+
+  .mat-input-null {
+    margin-top: 46px;
+    position: relative;
+    background: transparent;
+    width: 100%;
+    border: none;
+    border-bottom: 2px solid #ededed ;
+    outline: none;
+    margin-bottom: 15px;
+   }
+
+  .pass__go {
+    position: relative;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    display: -webkit-box;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-bottom: 15px;
+    width: 100%;
+    height: 100%;
+  }
+  .pass__go__badge {
+    background: #357F2F;
+    border-radius: 10px;
+    padding: 9px;
+  }
+
+  .pass__go__badge_yellow {
+    background: #f9ca35;
+    border-radius: 10px;
+    padding: 9px;
+  }
+
+  @-webkit-keyframes borderColor {
+    0% {
+      border-width: #fff;
+    }
+  
+    50% {
+      border-color: #357F2F;
+    }
+  
+    100% {
+      border-width: #fff;
+    }
+  }
+
+  @keyframes borderColor {
+    0% {
+      border-width: #fff;
+    }
+    50% {
+      border-color: #357F2F;
+    }
+    100% {
+      border-width: #fff;
+    }
+  }
+  .pass__go__badge__content {
+    -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+    border: 4px solid #fff;
+    border-radius: 5px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-box;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: flex;
+    height: 162px;
+    width: 162px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    will-change: auto;
+  }
+  .pass__go__badge__content_yellow {
+    -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+    border: 4px solid #fff;
+    border-radius: 5px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-box;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: flex;
+    height: 162px;
+    width: 162px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    will-change: auto;
+  }
+  .pass__go__badge__content__text {
+    color: #fff;
+    font-size: 60px;
+    font-weight: 900;
+    text-transform: uppercase;
+    font-family: system-ui, "Roboto", -apple-system, BlinkMacSystemFont, sans-serif;
+  }
+
+  .pass__go__badge__content__text_yellow {
+    color: #333333;
+    font-size: 60px;
+    font-weight: 900;
+    text-transform: uppercase;
+    font-family: system-ui, "Roboto", -apple-system, BlinkMacSystemFont, sans-serif;
+  }
+  .pass__go__badge__content__qr-code {
+    width: 150px;
+  }
+  .pass__go__note {
+    font-family: system-ui, "Roboto", -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 14px;
+    margin: 15px 0 0 0;
+    text-align: center;
+    font-size: 14px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.5;
+  }
+  .pass__go__note_yellow {
+    color: #333333;
+  }
+  .pass__go__note_green {
+    color: white;
+  }
+
+
+  #qrcode {
+    /* position: absolute;
+    top: 0;
+    z-index: 10; */
+    display: -webkit-box;
+    display: flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    /* width: 180px;
+    height: 180px;
+    padding: 15px; */
+    margin: 8px;
+  }
+
+  #qrcode img,
+  #qrcode canvas {
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    max-height: 213px;
+    max-width: 213px;
+    border: 5px solid white;
+  }
+
+  .wrapper {
+   /* height: 100% !important; */
+   display: -webkit-box;
+   display: -moz-flex;
+   display: -ms-flexbox;
+   display: flex;
+   -webkit-box-orient: vertical;
+   -webkit-box-direction: normal;
+   -ms-flex-direction: column;
+   flex-direction: column;
+   -webkit-box-align: center;
+       -ms-flex-align: center;
+           align-items: center;
+   -webkit-box-pack: center;
+       -ms-flex-pack: center;
+           justify-content: center;
+    /* padding: var(--spacer); */
+    padding-bottom: 0px;
+  }
+
+  #overlay {
+    position: fixed;
+    display: -webkit-box;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.85);
+    z-index: 2;
+    cursor: pointer;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+
+  #overlay a {
+    color: #fff;
+  }
+
+  .notDoundDiv {
+    color: #ffffff;
+    margin: 30px;
+    display: -webkit-box;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+
+  .notFoundHeading {
+    font-family: system-ui, "Roboto", -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 26px;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.19;
+    letter-spacing: 0.5px;
+    text-align: center;
+    margin: 0px !important;
+  }
+
+  .notFoundContent {
+    font-family: system-ui, "Roboto", -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 14px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.5;
+    letter-spacing: normal;
+    text-align: center;
+    margin: 0px !important;
+    padding-top: 8px;
+  }
+
+  .telClass {
+    color: #ffffff;
+    text-decoration: underline !important;
+  }
+
+  #text{
+    color: white;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+
+  .expireHeading {
+    font-size: 26px;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.19;
+    letter-spacing: 0.5px;
+    text-align: center;
+    font-family: system-ui, "Roboto", -apple-system, BlinkMacSystemFont, sans-serif;
+    margin: 0px !important;
+    padding-top: var(--spacer)
+  }
+
+  .warning_yellow {
+    font-size: 14px;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.21;
+    letter-spacing: normal;
+    font-family: system-ui, "Roboto", -apple-system, BlinkMacSystemFont, sans-serif;
+    color: #ae0000;
+    margin: 8px 0 0 0 !important;
+  }
+
+  .pass__go__badge_no {
+    background: #dfdfdf;
+    border-radius: 10px;
+  }
+
+  .pass__go__badge_no .pass__go__badge__content__text {
+    max-width: 160px;
+    max-height: 160px;
+  }
+
+  .vendor-badge {
+    border-radius: 20px;
+    /* padding: 4px;
+    width: 144px;
+    height: 40px; */
+    background-color: #ee572d;
+    text-align: center;
+    font-family: system-ui, "Roboto", -apple-system, BlinkMacSystemFont, sans-serif;
+    /* font-size: 24px;
+    line-height: 31px; */
+    color: #fff; 
+    /* font-weight: 500; */
+    margin-bottom: 8px;
+    padding: 8px 30px 8px 30px;
+  }
+
+  .outer {
+    margin-bottom: 15px;
+  }
+
+  .swiper-container {
+    width: 100%;
+    border-radius: 10px;
+  }
+  .swiper-container_single {
+    width: 100%;
+    border-radius: 10px;
+  }
+  .swiper-slide {
+    background: #fff;
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-radius: 10px;
+  -webkit-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+          box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+  height: auto !important;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding-bottom: 15px;
+  -webkit-box-pack: center !important;
+      -ms-flex-pack: center !important;
+          justify-content: center !important;
+  }
+  .swiper-slide_single {
+    position: relative;
+    background: #fff;
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    border-radius: 10px;
+    -webkit-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+            box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+    height: auto !important;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    /* padding-bottom: 15px; */
+    -webkit-box-pack: center !important;
+        -ms-flex-pack: center !important;
+            justify-content: center !important;
+  }
+  .swiper-slide_single_button {
+    background: #fff;
+    /* Center slide text vertically */
+    position: absolute;
+    left: 0;
+    /* margin: 15px; */
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    border-radius: 10px;
+    -webkit-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+            box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+    height: auto !important;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center !important;
+        -ms-flex-pack: center !important;
+            justify-content: center !important;
+  }
+  .swiper-wrapper {
+      height: auto !important;
+  }
+  .swiper-wrapper_single {
+    height: auto !important;
+}
+  .swiper-pagination {
+    position: relative !important;
+    bottom: 0px !important;
+    margin-top: 15px;
+  }
+  .reminder {
+    padding-top: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 4px;
+    color: #006290;
+    font-family: system-ui, "Roboto", -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1;
+    letter-spacing: 1.2px;
+  }
+  .title {
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 8px;
+    color: #333333;
+    font-family: system-ui, "Roboto", -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 16px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.38;
+    letter-spacing: normal;
+  }
+  .linkurl {
+    padding-left: 15px;
+    padding-right: 15px;
+    font-family: system-ui, "Roboto", -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1;
+    letter-spacing: normal;
+    color: #580f8b;
+    margin-bottom: 15px;
+  }
+  body a,
+  body a:link {
+    color: #580f8b;
+    text-decoration: none;
+  }
+
+  body a:visited .linkurl{
+    color: #666699;
+  }
+
+  body a:hover .linkurl,
+  body a:focus .linkurl,
+  body a:active .linkurl{
+    text-decoration: underline;
+  }
+
+.visit {
+  width: 100%;
+}
+
+.right-arrow {
+    width: 5px;
+    height: 10px;
+    -o-object-fit: contain;
+    object-fit: contain;
+    font-family: Font-Awesome-5-Pro-Solid;
+    font-size: 10px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    margin-left: 4px;
+}
+
+a span svg path { 
+  fill:  #580f8b;
+}
+
+a:visited span svg path { 
+  fill:  #666699;
+}
+
+
+.visited
+{
+  color: #666699 !important;
+}
+
+button {
+  width: 100%;
+  border-width: 0;
+  padding: 0px;
+  text-align: start;
+  opacity: 1;
+}
+
+.overlay_ad {
+  opacity: 1;
+  width: 100%;
+  height: 100%;
+  z-index: 9;
+  opacity: 0.5;
+  background: grey;
+  position: absolute;
+}
+
+.btn {
+  position: relative;
+}
+.btn-overlay {
+    position: absolute;
+    padding: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display:none;
+    border-radius: 10px;
+}
+.copied_txt {
+    font-family: system-ui, "Roboto", -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: white;
+    text-align: center;
+    /* top:50%;
+    position: absolute;
+    left: 41%; */
+}
+.copied_img {
+  width: 14px;
+  height: 16px;
+  object-fit: contain;
+  font-family: Font-Awesome-5-Pro-Solid;
+  font-size: 16px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: white;
+  /* position: absolute;
+  top: 34%;
+  left: 48%; */
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+.copied_div {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+}
+
+.qr_code_outer {
+    border-style: solid;
+    border-color: 4px solid white;
+    /* border-spacing: 10px; */
+    min-width: 159px;
+    min-height: 159px;
+    border-color: white;
+    border-width: 4px;
+    border-radius: 7.5px;
+}
+
+.vendor-text {
+  font-size: 20px;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: system-ui, "Roboto", -apple-system, BlinkMacSystemFont, sans-serif;
+  color: #fff; 
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.2;
+  letter-spacing: normal;
+  font-weight: 900;
+}
+
+.vaccine_heading {
+  width: auto;
+  height: 40px;
+  margin: 0 0 15px;
+  font-family: system-ui, "Roboto", -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 48px;
+  font-weight: 900;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 0.83;
+  letter-spacing: normal;
+}
+
+.vaccine_heading_yellow {
+  color: #333333;
+}
+
+.vaccine_heading_green {
+  color: #fff;
+}
+
+.button-qrcode {
+  height: 37px;
+  margin: 0px 0 0;
+  padding: 8px 0px 8px 0px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.3);
+  background-color: #333333;
+}
+
+.button-qrcode-trans {
+  height: 37px;
+  border-radius: 10px;
+  background-color: transparent;
+  margin-top: 23px;
+  box-shadow: none;
+}
+
+.vaccine {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;  
+  margin: -7px 0 7px 0;
+  object-fit: contain;
+  font-size: 30px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #fff;
+}
+
+.icon-qr-cta {
+  width: 16px;
+  height: 18px;
+  margin-right: 4px;
+  display: inline-block;
+  vertical-align: text-top;
+}
+
+.icon-qr-cta-hide {
+  width: 18px;
+  height: 18px;
+  display: inline-block;
+  vertical-align: text-top;
+}
+
+.oval-cross {
+  width: 50px;
+  height: 50px;
+  margin: 0 auto 8px;
+  padding: 22px;
+  background-color: #ee572d;
+  border-radius: 50px;
+}
+.oval-tick {
+  width: 50px;
+  height: 50px;
+  margin: 0 auto 8px;
+  padding: 22px;
+  background-color: #fff;
+  border-radius: 50px;
+}
+.qrcode-text {
+  margin: 0;
+  font-family: system-ui, "Roboto", -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.5;
+  letter-spacing: normal;
+  color: #fff;
+  text-transform: capitalize;
+}
+.qrcode-text-overlay {
+  margin: 0 0 0 6px;
+  font-family: system-ui, "Roboto", -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.5;
+  letter-spacing: normal;
+  color: #fff;
+  text-transform: capitalize;
+}
+#overlay-qr {
+  position: fixed;
+  display: none;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.8);
+  z-index: 2;
+  cursor: pointer;
+}
+
+.qr-link {
+  position: relative;
+  /* background-color: #fff;
+  border: 2px solid #f7f7f7;
+  -webkit-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+          box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 10px 10px 10px 10px; */
+  color: #333;
+  display: -webkit-box;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  min-height: 309px;
+  padding: 18px 0;
+  flex-grow: 1;
+}
+
+.vaccineHeader {
+  width:100%;
+  height: 50px;
+  margin: 0 0 0px;
+  padding: 12px 15px 10px;
+  background-color: #580f8b
+}
+
+.vaccineHeader .alignright {
+  letter-spacing: -0.05em;
+  font-size: 16px;
+  color: #fff;
+  text-transform: lowercase;
+}
+
+.vaccineHeader .alignright::first-letter {
+  text-transform: uppercase;
+}
+
+.vaccinated {
+  margin: 1px 0px;
+  font-family: system-ui, "Roboto", -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 28px;
+  font-weight: 900;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1;
+  letter-spacing: -0.75px;
+  color: #fff;
+}
+
+.alignleft {
+	float: left;
+}
+.alignright {
+  float: right;
+  margin: 10px 0 2px 0px;
+  font-family: system-ui, "Roboto", -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1;
+  letter-spacing: -0.48px;
+  text-align: right;
+  color: #fff;
+}
+.innerSection {
+  width:100%
+}
+/* @media (min-width: 485px) and (orientation:landscape) {
+  .pass {
+    min-height: 150% !important;
+  }
+} */
